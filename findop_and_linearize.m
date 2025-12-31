@@ -32,3 +32,5 @@ Gss = computeTransferFunctions(op);
 [A_long, B_long, A_lat, B_lat] = computeSSModel(op);
 %% Characteristic Verification
 printInfoOfSSModel(A_long, B_long, A_lat, B_lat)
+
+save("oper_point.mat")

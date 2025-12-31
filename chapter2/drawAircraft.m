@@ -8,7 +8,7 @@ function drawAircraft(states)
     persistent colors;
 
     if states(end) == 0
-        figure(1); clf;hold on;grid on;
+        figure; clf;hold on;grid on;
         [vertices, faces, colors] = createAircraft();
         aircraft_h = drawAircraftBody([], vertices, faces, colors, states(1:3), states(7:9));
         % bff_h = drawBodyFixedFrame([], states(1:3), states(7:9));

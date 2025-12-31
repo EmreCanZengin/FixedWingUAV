@@ -1,6 +1,7 @@
 # Extensions
 *.asv
 *.slxc
+*.slx.*
 
 # Folders
 slprj/
