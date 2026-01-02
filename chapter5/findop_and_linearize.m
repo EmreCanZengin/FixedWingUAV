@@ -1,6 +1,3 @@
-%% SETUP
-clear;clc;
-run("Setup.m")
 MODEL_NAME = "Trim_model";
 Va_trim = 25;
 R_trim = Inf;
@@ -17,7 +14,7 @@ u_trim = op.Inputs.u;
 
 fprintf('\n--------------------------------------------------------\n');
 fprintf('An operating point has found.\n');
-fprintf('Please Run the Simulation file about 10-20 seconds to verify\n');
+fprintf('Please Run the Chapter5.slx file about 10-20 seconds to verify\n');
 fprintf('--------------------------------------------------------\n');
 
 user_response = input("Are the simulation results satisfactory? (y/n): ", 's');
@@ -33,4 +30,4 @@ Gss = computeTransferFunctions(op);
 %% Characteristic Verification
 printInfoOfSSModel(A_long, B_long, A_lat, B_lat)
 
-save("oper_point.mat")
+save("../oper_point.mat")
