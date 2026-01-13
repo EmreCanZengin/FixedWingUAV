@@ -11,7 +11,7 @@ POST_PLOTTING = 0; % 0: not animation, 1: animated
 SIMULATION_NAME = "Chapter5.slx";
 SIMOUT = "simout";
 
-IMPULSE_ACTIVE = 0; % 0: doesn't trim the model, 1: trims the model
+IMPULSE_ACTIVE = 0;
 
 if (~isfile(which(FINDOP_AND_LINEARIZE_WS_DATA_NAME)))
     run(FINDOP_AND_LINEARIZE_SCRIPT_NAME);
@@ -19,12 +19,16 @@ else
     load(FINDOP_AND_LINEARIZE_WS_DATA_NAME)
 end
 
-u_impulse = zeros(4, 1);
+t_sim = (0:SIM.FixedStepSize:SIM.StopTime)';
+n_steps = length(t_sim);
+
+u_impulse = zeros(n_steps, 4);
 if IMPULSE_ACTIVE
-    % This function is written a little bad
-    % you need to define impulse signal in it manually.
+% This function is written a little bad
+% you need to define impulse signal in it manually.
     u_impulse = createImpulseForInputs(); 
 end
+
 out = sim(SIMULATION_NAME);
 
 

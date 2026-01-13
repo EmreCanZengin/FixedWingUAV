@@ -20,7 +20,7 @@ function sim_impulse = createImpulseForInputs()
     % Impulse Amplitudes
     doublet_amp = 5 * pi / 180; % 25% deviation.
 
-    u_impulse(start_idx:end_idx, impulse_idx) = doublet_amp; % 4 x N matrix. how can you do the other way around
+    u_impulse(start_idx:end_idx, impulse_idx) = doublet_amp; % 4 x N matrix. 
 
     sim_impulse = timeseries(u_impulse, t_sim);
 end

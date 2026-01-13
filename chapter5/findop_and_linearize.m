@@ -1,5 +1,5 @@
 MODEL_NAME = "Trim_model";
-Va_trim = 25;
+Va_trim = 17;
 R_trim = Inf;
 
 gamma_trim = 0 * pi / 180;
