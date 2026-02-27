@@ -23,6 +23,7 @@ t_sim = (0:SIM.FixedStepSize:SIM.StopTime)';
 n_steps = length(t_sim);
 
 u_impulse = zeros(n_steps, 4);
+u_impulse = timeseries(u_impulse, t_sim);
 if IMPULSE_ACTIVE
 % This function is written a little bad
 % you need to define impulse signal in it manually.

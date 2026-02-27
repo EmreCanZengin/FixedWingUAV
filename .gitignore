@@ -3,5 +3,8 @@
 *.slxc
 *.slx.*
 
+*.mat
+
 # Folders
 slprj/
+
