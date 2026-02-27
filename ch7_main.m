@@ -4,7 +4,7 @@ run("Setup.m");
 %% 
 LNG_MODEL = 2; % Nonlinear Drag - Lift
 TRIM_MODEL = "Trim_model";
-TRIM_DATA_FILE = "ch6.mat";
+TRIM_DATA_FILE = "ch7.mat";
 SIMULATION_FILE = "Chapter6.slx";
 ENVELOPE_DATA_FILE = "envelope.mat";
 FIND_ENVELOPE = false;
