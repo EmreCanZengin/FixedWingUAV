@@ -62,5 +62,3 @@ Based on concepts from:
 - Randal W. Beard and Timothy W. McLain, *Small Unmanned Aircraft: Theory and Practice*.
 
 ---
-
-If you want, I can also add a `Getting Started` section with specific scripts to run for each chapter.
