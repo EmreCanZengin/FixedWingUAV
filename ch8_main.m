@@ -4,7 +4,7 @@ run("Setup.m");
 %% 
 LNG_MODEL = 2; % Nonlinear Drag - Lift
 TRIM_MODEL = "Trim_model";
-TRIM_DATA_FILE = "ch7.mat";
+TRIM_DATA_FILE = fullfile(fileparts(mfilename("fullpath")), "trim_straight_level.mat");
 
 Va_trim = 25;
 R_trim = Inf;

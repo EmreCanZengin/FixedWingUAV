@@ -1,10 +1,10 @@
 clear;clc;
-run("Setup.m");
+run(fullfile(fileparts(fileparts(mfilename("fullpath"))), "Setup.m"));
 
 %% 
 LNG_MODEL = 2; % Nonlinear Drag - Lift
 TRIM_MODEL = "Trim_model";
-TRIM_DATA_FILE = "ch7.mat";
+TRIM_DATA_FILE = fullfile(fileparts(fileparts(mfilename("fullpath"))), "trim_straight_level.mat");
 
 Va_trim = 25;
 R_trim = Inf;
@@ -25,5 +25,6 @@ CMD.Altitude = -TRIM.x(3);
 LIM = loadSafetyLimits();
 WIND = loadWindParameters();
 SNS = loadSensorParameters();
+loadSensorBusDefs;
 
 disp("Simulation settings are done. Go run it!")

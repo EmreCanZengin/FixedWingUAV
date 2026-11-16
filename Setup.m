@@ -8,3 +8,8 @@ POST_PLOTTING = 0; % 0: not animation, 1: animated
 
 MAV = loadMAVParameters();
 SIM = loadSIMParameters();
+
+% Keep Simulink simulation artifacts under the repository root.
+Simulink.fileGenControl('set', ...
+    'CacheFolder', fullfile(fileparts(mfilename('fullpath')), 'build'), ...
+    'createDir', true);
