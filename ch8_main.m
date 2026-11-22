@@ -1,5 +1,5 @@
 clear;clc;
-run("Setup.m");
+run(fullfile(fileparts(mfilename("fullpath")), "Setup.m"));
 
 %% 
 LNG_MODEL = 2; % Nonlinear Drag - Lift
@@ -25,6 +25,7 @@ CMD.Altitude = -TRIM.x(3);
 LIM = loadSafetyLimits();
 WIND = loadWindParameters();
 SNS = loadSensorParameters();
+loadSensorBusDefs;
 EST = loadEstimationParameters(SNS);
 
 assert(EST.SamplingTime >= SIM.FixedStepSize, "Simulation fixed step size can't cover the sampling time of the Estimation Block !!!")

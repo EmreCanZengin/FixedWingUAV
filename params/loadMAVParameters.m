@@ -7,7 +7,7 @@ function MAV = loadMAVParameters()
     MAV.Jz = 1.759;
     MAV.Jxz = 0.120;
     MAV.J_B_B = [MAV.Jx 0 -MAV.Jxz;
-                0  MAV.Jy  0
+                0  MAV.Jy  0 
                 -MAV.Jxz 0  MAV.Jz];
 
     MAV.m = 13.5;
