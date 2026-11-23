@@ -13,7 +13,7 @@ function DES = loadDesignParams()
     DES.delta_t_climb_or_takeoff = 0.5 * DES.delta_t_max; % TODO: It's too simple and why would i use half of my power when I am taking off.
 
     %% ROLL ANGLE
-    DES.Roll.max = 15 * D2R;
+    DES.Roll.max = 25 * D2R; % based on Estimation benchmark maneuver performance
     DES.Roll.error_max = 2 * DES.Roll.max;
     DES.Roll.zeta = 0.85;
     % Roll Loop Integrator Design. Integrator induced zero (-Ki / Kp)
@@ -37,9 +37,9 @@ function DES = loadDesignParams()
     %% Altitude Hold Loop By Pitch Angle Command
     DES.Altitude.Wx_theta = 15;
     DES.Altitude.zeta = 1;
-    DES.Altitude.Threshold = 10     ; % [m]
+    DES.Altitude.Threshold = 10; % [m]
     DES.Altitude.Takeoff = 5; % [m]
-    DES.Altitude.Pitch.error_max = 10 * D2R;
+    DES.Altitude.Pitch.error_max = 15 * D2R;
     DES.Altitude.Pitch.max = DES.Altitude.Pitch.error_max / 2;
 
     %% Airspeed Hold Loop By Pitch Angle Command
