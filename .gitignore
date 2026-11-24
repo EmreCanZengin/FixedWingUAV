@@ -3,8 +3,6 @@
 *.slxc
 *.slx.*
 
-*.mat
-
 # Folders
 slprj/
 /build/
